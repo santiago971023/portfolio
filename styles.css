@@ -1,0 +1,48 @@
+
+
+
+.header{
+    width: 90%;
+    min-height: 2em;
+    background-color: rgba(243, 243, 243, 0.2);
+    border-radius: 1em;
+    padding: 0em 2em;
+    position: fixed;
+    margin: 1em auto;
+    left: 0;
+    right: 0;
+    
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-backdrop-filter:blur(15px) ;
+    backdrop-filter:blur(15px) ;
+    
+}
+.header .img{
+    border-radius: 50%;
+    width: 6em;
+}
+.header .nav{
+    
+}
+
+.header .ul{
+    display: flex;
+    flex-flow: row wrap;
+}
+.header .li{
+    margin: 0 1em;
+}
+.header .li .a{}
+
+
+.section{
+    width: 100%;
+    min-height: 40em;
+    background-color: brown;
+    border-bottom: 1px solid white;
+    padding-top: 7em;
+}
