@@ -1,5 +1,38 @@
 
 
+.circulos{
+    display: none;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    top:0;
+    left:0;
+    background-color: aqua;
+    z-index: 0;
+
+}
+
+.circulo1{
+    width: 10em;
+    left: 10em;
+    top: 10em;
+}
+.circulo2{
+    width: 10em;
+    right: 10em;
+    top:10em;
+}
+.circulo3{
+    width: 10em;
+    left: 10em;
+    bottom: 10em;
+}
+.circulo4{
+    width: 10em;
+    right: 10em;
+    bottom: 10em;
+}
+
 
 .header{
     width: 90%;
@@ -41,8 +74,40 @@
 
 .section{
     width: 100%;
-    min-height: 40em;
+    min-height: 100vh;
     background-color: brown;
     border-bottom: 1px solid white;
     padding-top: 7em;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.section .img_inicio {
+    width: 15em;
+   
+    border-radius: 1em;
+    box-shadow: 7px 7px 7px 2px black;
+}
+
+.section .h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--tipo-principal);
+    font-size: 4em;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.section .h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--tipo-principal);
+    font-size: 3em;
+    font-style: italic;
+
 }
