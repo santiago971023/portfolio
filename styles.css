@@ -1,37 +1,112 @@
 
 
 .circulos{
-    display: none;
     position: fixed;
     width: 100%;
     min-height: 100vh;
-    top:0;
-    left:0;
-    background-color: aqua;
-    z-index: 0;
+    margin: 0 auto;
+    z-index: -1;
+}
 
+.circulo{
+    width: 20%;
+    position: absolute;
+    /* filter: blur(2em); */
+    
 }
 
 .circulo1{
-    width: 10em;
-    left: 10em;
-    top: 10em;
+    left: 15em;
+    top: 0;
+    color: black;
+    animation: circle1 20s infinite;
+    
 }
+
 .circulo2{
-    width: 10em;
-    right: 10em;
-    top:10em;
+    top: 0;
+    right: 0;    
+    color: green;
+    animation: circulo 5s ease infinite both;
+    display: none;
+    
 }
 .circulo3{
-    width: 10em;
-    left: 10em;
-    bottom: 10em;
+    left:0;
+    bottom: 0;
+    color: purple;
+    animation: circulo 8s ease infinite both;
+    display: none;
+ 
 }
 .circulo4{
-    width: 10em;
-    right: 10em;
-    bottom: 10em;
+    display: none;
+    right: 0;
+    bottom: 0;
+    color: rgb(47, 0, 255);
+    animation: circulo 10s ease infinite both;
+    
 }
+
+@keyframes circulo {
+    from{
+        transform:rotate(0deg) scale(2);
+    }
+    to{
+        transform:rotate(360deg) scale(2);
+    }
+    
+}
+
+@keyframes circle1 {
+    0%{
+        transform: translateY(0%);
+        transform:rotate(0deg) scale(2);
+        
+        
+        
+    }
+    25%{
+        transform: translateY(100%);
+        transform:rotate(90deg) scale(2);
+        
+    }
+ 
+    50%{
+        transform: translateX(100%) translateY(100%);
+        transform:rotate(180deg) scale(2);
+        
+        
+    }
+
+    75% {
+        transform: translateX(100%) translateY(0%);
+        transform:rotate(270deg) scale(2);
+        
+        
+    }
+
+    100%{
+        transform: translateX(0%) translateY(0%);
+        transform:rotate(360deg) scale(2);
+        
+        
+    } 
+}
+
+
+/* .circulos .circulo1 .path{
+    fill:black;
+}
+.circulos .circulo2 .path{
+    fill:green;
+}
+.circulos .circulo3 .path{
+    fill:orange;
+}
+.circulos .circulo4 .path{
+    fill:purple;
+} */
 
 
 .header{
@@ -65,17 +140,30 @@
 .header .ul{
     display: flex;
     flex-flow: row wrap;
+    
 }
 .header .li{
     margin: 0 1em;
+    cursor: pointer;
+    border-radius: 10px;
 }
-.header .li .a{}
+.header .li .a{
+    font-size: 20px;
+    padding: 33px;
+    
+}
+
+
+.header .li:hover{
+    transform: scale(1.2);
+    color: aqua;
+}
 
 
 .section{
     width: 100%;
     min-height: 100vh;
-    background-color: brown;
+    /* background-color: brown; */
     border-bottom: 1px solid white;
     padding-top: 7em;
 
@@ -94,7 +182,21 @@
     border-radius: 1em;
     box-shadow: 7px 7px 7px 2px black;
 }
+.section .img_inicio:hover {
+    transform: scale(1.1) ;
+    
+    animation: agrandar_foto .7s ease;
+}
 
+@keyframes agrandar_foto {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+    
+}
 .section .h1{
     text-align: center;
     text-transform: uppercase;
@@ -109,5 +211,11 @@
     font-family: var(--tipo-principal);
     font-size: 3em;
     font-style: italic;
+
+}
+
+
+
+.proyectos{
 
 }
